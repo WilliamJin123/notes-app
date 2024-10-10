@@ -2,7 +2,7 @@
     font-family: 'Karla'
 }
 .mde-text{
-    overflow-y: hidden;
+    overflow: hidden;
     min-height: 91vh;
 }
 .reactMde{
