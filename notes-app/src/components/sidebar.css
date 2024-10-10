@@ -11,13 +11,8 @@
     align-items: center;
     margin: 5% 5%;
 }
-.sidebar button{
-    background-color: #4A4E74;
-    color: white;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    cursor: pointer;
+.sidebar-btn{
+    
     width: 40px;
     height: 40px;
     margin: 0 0 0 auto;
@@ -33,5 +28,9 @@
 .notes{
     cursor: pointer;
     padding: 5% 0 5% 5%;
-
+    display: flex;
+}.notes .fa-trash-can{
+    float: right;
+    margin: 0 5% 0 auto;
+    display: none;
 }

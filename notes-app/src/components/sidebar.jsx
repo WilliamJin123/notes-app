@@ -19,7 +19,13 @@ export default function Sidebar(props) {
                 }
                 }
             >
-                <h1 className="note-title">Note {index+1}</h1>
+                <h1 className="note-title">{note.body.split("\n")[0]}</h1>
+                <i class="fa-regular fa-trash-can"
+                    style={{
+                        display: hovered === index || props.current.id === note.id ? 'block' : 'none'
+                    }}
+                    onClick={event => props.deleteNote(event, note.id)}
+                ></i>
             </div>
 
         </div>
@@ -29,7 +35,7 @@ export default function Sidebar(props) {
         <div className = "sidebar">
             <div className = "sidebar-heading">
                 <h3>Notes</h3>
-                <button onClick= {props.addNote}>+</button>
+                <button className="sidebar-btn" onClick= {props.addNote}>+</button>
             </div>  
             {noteElems}
         </div>
