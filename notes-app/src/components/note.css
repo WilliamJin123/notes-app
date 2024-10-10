@@ -1,0 +1,15 @@
+.mde-preview{
+    font-family: 'Karla'
+}
+.mde-text{
+    overflow-y: hidden;
+    min-height: 91vh;
+}
+.reactMde{
+    overflow: hidden;
+    resize: none;
+}
+.editor{
+    margin: 2vh;
+    
+}
