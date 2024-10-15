@@ -16,16 +16,7 @@ export default function Note(props) {
         strikethrough: true,
         tasklists: true,
       });
-    function adjustHeight() {
-            if (textArea.current){
-                setHeight("auto");
-                setHeight(`${textArea.current.scrollHeight}px`);
-            }
-        }  
-    useEffect(() =>{
-        
-        adjustHeight();
-    }, [props.current.body])
+    
 
 
     return (
@@ -36,12 +27,10 @@ export default function Note(props) {
                     height: height
                 }} 
                 className = 'reactMde'
-                value = {props.current.body}
-                onChange={(value) => {
-                    props.changeNote(value);
-                    adjustHeight();
-        
-                } }
+                value = {props.tempText}
+                onChange={
+                    props.setTempText
+                }
                 selectedTab={tab}
                 onTabChange={setTab}
                 generateMarkdownPreview={(markdown) =>
